@@ -1,7 +1,7 @@
 {
   "env": {
     "browser": true,
-    "es2020": true
+    "es2021": true
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -23,6 +23,7 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "@typescript-eslint/no-var-requires": "warn"
   }
 }
