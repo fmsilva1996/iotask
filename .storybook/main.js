@@ -18,13 +18,8 @@ module.exports = {
       ...config,
       resolve: {
         ...config.resolve,
-        alias: {
-          ...config.resolve.alias,
-          '@chakraui/react': toPath('node_modules/@chakraui/react'),
-          '@emotion/core': toPath('node_modules/@emotion/react'),
-          'emotion-theming': toPath('node_modules/@emotion/react'),
-        },
-      },
+        modules: ['node_modules']
+      }
     }
   },
 }

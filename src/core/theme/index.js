@@ -1,6 +1,4 @@
-import { extendTheme } from '@chakra-ui/react'
-
-const theme = extendTheme({
+const theme = {
   fonts: {
     heading: 'Rubik',
     body: 'Rubik',
@@ -109,20 +107,6 @@ const theme = extendTheme({
       gbLight: '#F8FAFB',
     },
   },
-  components: {
-    Container: {
-      variants: {
-        task: {
-          h: '56px',
-          w: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          borderBottom: '1px solid',
-          borderColor: 'brand.outline',
-        },
-      },
-    },
-  },
-})
+}
 
 export default theme
