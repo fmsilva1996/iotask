@@ -1,7 +1,9 @@
-const theme = {
+import { DefaultTheme } from 'styled-components'
+
+const theme: DefaultTheme = {
   fonts: {
-    heading: 'Rubik',
-    body: 'Rubik',
+    heading: '"Rubik", sans-serif',
+    body: '"Rubik", sans-serif',
   },
   fontWeights: {
     light: 300,
@@ -92,20 +94,18 @@ const theme = {
     },
   },
   colors: {
-    brand: {
-      primBlue: '#4D7CFE',
-      primBlack: '#252632',
-      secGray: '#778CA2',
-      secGray: '#98A9BC',
-      secOrange: '#FFAB2B',
-      secGreen: '#6DD230',
-      secPink: '#FE4D97',
-      secBlue: '#2CE5F6',
-      boldBlack: '#1B1E24',
-      outline: '#E8ECEF',
-      bgDark: '#F2F4F6',
-      gbLight: '#F8FAFB',
-    },
+    primBlue: '#4D7CFE',
+    primBlack: '#252632',
+    boldBlack: '#1B1E24',
+    secGray: '#778CA2',
+    terGray: '#98A9BC',
+    secOrange: '#FFAB2B',
+    secGreen: '#6DD230',
+    secPink: '#FE4D97',
+    secBlue: '#2CE5F6',
+    outline: '#E8ECEF',
+    bgDark: '#F2F4F6',
+    gbLight: '#F8FAFB',
   },
 }
 
