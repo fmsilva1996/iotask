@@ -7,6 +7,15 @@ export default {
   component: Button,
 } as Meta
 
-const Template: Story = () => <Button>Button</Button>
+const Template: Story = args => <Button {...args}>Active</Button>
 
 export const Default = Template.bind({})
+Default.args = {
+  disable: false,
+}
+
+export const Outline = Template.bind({})
+Outline.args = {
+  outline: true,
+  disable: false,
+}
