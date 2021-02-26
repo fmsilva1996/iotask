@@ -1,48 +1,11 @@
-import React, { ReactElement, useState } from 'react'
-import { Checkbox, Container, Heading } from '@chakra-ui/react'
+import React, { ReactElement, ReactNode } from 'react'
 
 export type TaskProps = {
-  title: string
-  isDone?: boolean
+  children: ReactNode
 }
 
-export const Task = ({ title, isDone }: TaskProps): ReactElement => {
-  const [isChecked, setIsChecked] = useState(isDone || false)
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setIsChecked(e.target.checked)
-
-  const renderTitle = () => {
-    if (!isChecked)
-      return (
-        <Heading textStyle="h5" lineHeight="30px">
-          {title}
-        </Heading>
-      )
-    return (
-      <Heading
-        textStyle="h5"
-        lineHeight="30px"
-        color="brand.secGray"
-        textDecoration="line-through"
-      >
-        {title}
-      </Heading>
-    )
-  }
-
-  return (
-    <Container variant="task">
-      <Checkbox
-        isChecked={isChecked}
-        size="lg"
-        spacing="1rem"
-        onChange={e => handleChange(e)}
-      >
-        {renderTitle()}
-      </Checkbox>
-    </Container>
-  )
+export const Task = ({ children }: TaskProps): ReactElement => {
+  return <div>{children}</div>
 }
 
 export default Task
