@@ -24,7 +24,11 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+      {
+        test: /\.(png|jpe?g|gif|eot|ttf|woff|woff2)$/i,
         use: 'url-loader',
         type: 'javascript/auto',
       },
