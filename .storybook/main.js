@@ -14,12 +14,17 @@ module.exports = {
     reactDocgen: false,
   },
   webpackFinal: async config => {
-    return {
-      ...config,
-      resolve: {
-        ...config.resolve,
-        modules: ['node_modules']
-      }
-    }
-  },
+    config.resolve.modules.push('node_modules')
+
+    // Default rule for images /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/
+    const fileLoaderRule = config.module.rules.find(rule => rule.test && rule.test.test('.svg'));
+    fileLoaderRule.exclude = /\.svg$/
+
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    })
+    
+    return config
+  }
 }

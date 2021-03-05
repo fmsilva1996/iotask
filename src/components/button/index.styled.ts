@@ -22,7 +22,7 @@ const Button = styled.button<IButtonStyled>`
   }
 
   :disabled {
-    cursor: auto;
+    cursor: default;
   }
 `
 
