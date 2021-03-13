@@ -8,6 +8,14 @@ export default {
   component: Task,
 } as Meta
 
-const Template: Story<TaskProps> = () => <Task>Example Task</Task>
+const Template: Story<TaskProps> = args => <Task {...args}>Example Task</Task>
 
 export const Default = Template.bind({})
+Default.args = {
+  isDone: false,
+}
+
+export const Checked = Template.bind({})
+Checked.args = {
+  isDone: true,
+}
