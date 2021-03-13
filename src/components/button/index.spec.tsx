@@ -1,11 +1,10 @@
 import React from 'react'
-import { screen } from '@testing-library/react'
-import { renderStyled } from '../../core/tests/helpers'
+import { render, screen } from '@testing-library/react'
 import Button from './index'
 
 describe('<Button />', () => {
   it('should render without error', () => {
-    renderStyled(<Button>Click</Button>)
+    render(<Button>Click</Button>)
     const buttonElement = screen.getByText(/click/i)
     expect(buttonElement).toBeInTheDocument()
   })
