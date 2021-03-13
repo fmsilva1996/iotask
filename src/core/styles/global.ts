@@ -1,6 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
-
-export default createGlobalStyle`
+export default `
   * {
     margin: 0;
     padding: 0;

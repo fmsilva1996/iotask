@@ -1,13 +1,12 @@
 import React, { ReactElement } from 'react'
-import { SidebarStyled, LogoStyled } from './index.styled'
 import Logo from '../../assets/logo.svg'
 
 const Sidebar = (): ReactElement => (
-  <SidebarStyled>
-    <LogoStyled>
+  <aside style={{ backgroundColor: 'black' }}>
+    <section>
       <Logo />
-    </LogoStyled>
-  </SidebarStyled>
+    </section>
+  </aside>
 )
 
 export default Sidebar

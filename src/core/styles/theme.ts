@@ -1,6 +1,4 @@
-import { DefaultTheme } from 'styled-components'
-
-const theme: DefaultTheme = {
+const theme = {
   fonts: {
     heading: '"Rubik", sans-serif',
     body: '"Rubik", sans-serif',

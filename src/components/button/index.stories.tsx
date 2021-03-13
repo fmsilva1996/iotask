@@ -13,9 +13,3 @@ export const Default = Template.bind({})
 Default.args = {
   disable: false,
 }
-
-export const Outline = Template.bind({})
-Outline.args = {
-  outline: true,
-  disable: false,
-}
